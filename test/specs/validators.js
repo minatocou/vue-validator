@@ -78,6 +78,24 @@ describe('validators', () => {
           assert(required([1, 'foo']))
         })
       })
+
+      describe('include empty string', () => {
+        it('should be false', () => {
+          assert(required([1, '']) === false)
+        })
+      })
+
+      describe('include null', () => {
+        it('should be false', () => {
+          assert(required([1, null]) === false)
+        })
+      })
+
+      describe('include undefined', () => {
+        it('should be false', () => {
+          assert(required([1, '2', undefined]) === false)
+        })
+      })
     })
 
     describe('function', () => {
@@ -176,27 +194,51 @@ describe('validators', () => {
 
 
   describe('minlength', () => {
-    describe('boundary', () => {
-      describe('length - 1', () => {
-        it('should be false', () => {
-          assert(minlength('aaa', '4') === false)
+    describe('string', () => {
+      describe('boundary', () => {
+        describe('length - 1', () => {
+          it('should be false', () => {
+            assert(minlength('aaa', '4') === false)
+          })
         })
-      })
 
-      describe('just length', () => {
-        it('should be true', () => {
-          assert(minlength('aaaa', '4'))
+        describe('just length', () => {
+          it('should be true', () => {
+            assert(minlength('aaaa', '4'))
+          })
         })
-      })
 
-      describe('length + 1', () => {
-        it('should be true', () => {
-          assert(minlength('aaaaa', '4'))
+        describe('length + 1', () => {
+          it('should be true', () => {
+            assert(minlength('aaaaa', '4'))
+          })
         })
       })
     })
 
-    describe('not string', () => {
+    describe('array', () => {
+      describe('boundary', () => {
+        describe('length - 1', () => {
+          it('should be false', () => {
+            assert(minlength(['a', 'b', 'c'], '4') === false)
+          })
+        })
+
+        describe('just length', () => {
+          it('should be true', () => {
+            assert(minlength(['a', 'b', 'c', 1], '4'))
+          })
+        })
+
+        describe('length + 1', () => {
+          it('should be true', () => {
+            assert(minlength([1, 2, 3, 4, 5], '4'))
+          })
+        })
+      })
+    })
+
+    describe('not support type', () => {
       it('should be false', () => {
         assert(minlength(111, '4') === false)
       })
@@ -217,27 +259,51 @@ describe('validators', () => {
 
 
   describe('maxlength', () => {
-    describe('boundary', () => {
-      describe('length - 1', () => {
-        it('should be true', () => {
-          assert(maxlength('aaa', '4'))
+    describe('string', () => {
+      describe('boundary', () => {
+        describe('length - 1', () => {
+          it('should be true', () => {
+            assert(maxlength('aaa', '4'))
+          })
         })
-      })
 
-      describe('just length', () => {
-        it('should be true', () => {
-          assert(maxlength('aaaa', '4'))
+        describe('just length', () => {
+          it('should be true', () => {
+            assert(maxlength('aaaa', '4'))
+          })
         })
-      })
 
-      describe('length + 1', () => {
-        it('should be false', () => {
-          assert(maxlength('aaaaa', '4') === false)
+        describe('length + 1', () => {
+          it('should be false', () => {
+            assert(maxlength('aaaaa', '4') === false)
+          })
         })
       })
     })
 
-    describe('not string', () => {
+    describe('array', () => {
+      describe('boundary', () => {
+        describe('length - 1', () => {
+          it('should be true', () => {
+            assert(maxlength(['a', 'b', 'c'], '4'))
+          })
+        })
+
+        describe('just length', () => {
+          it('should be true', () => {
+            assert(maxlength(['a', 'b', 'c', 1], '4'))
+          })
+        })
+
+        describe('length + 1', () => {
+          it('should be false', () => {
+            assert(maxlength([1, 2, 3, 4, 5], '4') === false)
+          })
+        })
+      })
+    })
+
+    describe('not support type', () => {
       it('should be false', () => {
         assert(maxlength({}, '4') === false)
       })

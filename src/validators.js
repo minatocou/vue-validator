@@ -8,12 +8,24 @@
  *
  * This function validate whether the value has been filled out.
  *
- * @param val
+ * @param {*} val
  * @return {Boolean}
  */
 
 export function required (val) {
   if (Array.isArray(val)) {
+    if (val.length !== 0) {
+      let valid = true
+      for (let i = 0, l = val.length; i < l; i++) {
+        valid = required(val[i])
+        if (!valid) {
+          break
+        }
+      }
+      return valid
+    } else {
+      return false
+    }
     return val.length > 0
   } else if (typeof val === 'number' || typeof val === 'function') {
     return true
@@ -52,34 +64,42 @@ export function pattern (val, pat) {
 /**
  * minlength
  *
- * This function validate whether the minimum length of the string.
+ * This function validate whether the minimum length.
  *
- * @param {String} val
+ * @param {String|Array} val
  * @param {String|Number} min
  * @return {Boolean}
  */
 
 export function minlength (val, min) {
-  return typeof val === 'string' &&
-    isInteger(min, 10) &&
-    val.length >= parseInt(min, 10)
+  if (typeof val === 'string') {
+    return isInteger(min, 10) && val.length >= parseInt(min, 10)
+  } else if (Array.isArray(val)) {
+    return val.length >= parseInt(min, 10)
+  } else {
+    return false
+  }
 }
 
 
 /**
  * maxlength
  *
- * This function validate whether the maximum length of the string.
+ * This function validate whether the maximum length.
  *
- * @param {String} val
+ * @param {String|Array} val
  * @param {String|Number} max
  * @return {Boolean}
  */
 
 export function maxlength (val, max) {
-  return typeof val === 'string' &&
-    isInteger(max, 10) &&
-    val.length <= parseInt(max, 10)
+  if (typeof val === 'string') {
+    return isInteger(max, 10) && val.length <= parseInt(max, 10)
+  } else if (Array.isArray(val)) {
+    return val.length <= parseInt(max, 10)
+  } else {
+    return false
+  }
 }
 
 

@@ -1,6 +1,3 @@
-import { warn } from './util'
-
-
 export default function (Vue) {
 
   // override _init
@@ -15,7 +12,7 @@ export default function (Vue) {
   // override _destroy
   const destroy = Vue.prototype._destroy
   Vue.prototype._destroy = function () {
+    destroy.apply(this, arguments)
     this._validatorMaps = null
-    destroy.call(this)
   }
 }

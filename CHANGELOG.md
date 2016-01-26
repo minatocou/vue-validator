@@ -1,3 +1,186 @@
+<a name="2.0.0-alpha.16"></a>
+# [2.0.0-alpha.16](https://github.com/vuejs/vue-validator/compare/v2.0.0-alpha.15...v2.0.0-alpha.16) (2016-01-22)
+
+
+### Bug Fixes
+
+* **base:** fix input wrong behavior ([2dcafeb](https://github.com/vuejs/vue-validator/commit/2dcafeb)), closes [#141](https://github.com/vuejs/vue-validator/issues/141) [#142](https://github.com/vuejs/vue-validator/issues/142)
+* **validate:** cannot compile validator when using v-for and v-model ([9ade590](https://github.com/vuejs/vue-validator/commit/9ade590)), closes [#140](https://github.com/vuejs/vue-validator/issues/140)
+* **validations:** fix other wrong behaviors ([bf6e7d0](https://github.com/vuejs/vue-validator/commit/bf6e7d0))
+
+
+
+<a name="2.0.0-alpha.15"></a>
+# [2.0.0-alpha.15](https://github.com/vuejs/vue-validator/compare/v2.0.0-alpha.14...v2.0.0-alpha.15) (2016-01-19)
+
+### Bug Fixes
+
+* **validate:** occured TypeError when use v-if ([9ca17b4](https://github.com/vuejs/vue-validator/commit/9ca17b4)), closes [#139](https://github.com/vuejs/vue-validator/issues/139)
+
+
+<a name="2.0.0-alpha.14"></a>
+# [2.0.0-alpha.14](https://github.com/vuejs/vue-validator/compare/v2.0.0-alpha.13...v2.0.0-alpha.14) (2016-01-18)
+
+
+> Skipped 2.0.0-alpha.14 because it contains an incorrect dist file.
+
+
+
+<a name="2.0.0-alpha.13"></a>
+# [2.0.0-alpha.13](https://github.com/vuejs/vue-validator/compare/v2.0.0-alpha.12...v2.0.0-alpha.13) (2016-01-17)
+
+
+### Bug Fixes
+
+* **validate:** read property access error when use v-model and v-for ([e7c7714](https://github.com/vuejs/vue-validator/commit/e7c7714)), closes [#137](https://github.com/vuejs/vue-validator/issues/137)
+
+### Features
+
+* **custom:** support local registration ([74b1631](https://github.com/vuejs/vue-validator/commit/74b1631)), closes [#125](https://github.com/vuejs/vue-validator/issues/125)
+
+
+
+<a name="2.0.0-alpha.12"></a>
+# [2.0.0-alpha.12](https://github.com/vuejs/vue-validator/compare/v2.0.0-alpha.11...v2.0.0-alpha.12) (2016-01-16)
+
+
+### Bug Fixes
+
+* **validate:** expression evaluating error ([f918e39](https://github.com/vuejs/vue-validator/commit/f918e39)), closes [#35](https://github.com/vuejs/vue-validator/issues/35) [#103](https://github.com/vuejs/vue-validator/issues/103) [#111](https://github.com/vuejs/vue-validator/issues/111)
+
+
+
+<a name="2.0.0-alpha.11"></a>
+# [2.0.0-alpha.11](https://github.com/vuejs/vue-validator/compare/v2.0.0-alpha.10...v2.0.0-alpha.11) (2016-01-14)
+
+
+### Features
+
+* **validate:** support field attribute ([4fbaf3a](https://github.com/vuejs/vue-validator/commit/4fbaf3a)), closes [#46](https://github.com/vuejs/vue-validator/issues/46) [#129](https://github.com/vuejs/vue-validator/issues/129)
+
+
+
+<a name="2.0.0-alpha.10"></a>
+# [2.0.0-alpha.10](https://github.com/vuejs/vue-validator/compare/v2.0.0-alpha.9...v2.0.0-alpha.10) (2016-01-13)
+
+### Bug Fixes
+
+* **util:** fix Firefox dispatchEvent bug ([e2bd08f](https://github.com/vuejs/vue-validator/commit/e2bd08f)), closes [#132](https://github.com/vuejs/vue-validator/issues/132)
+
+### Features
+
+* **validate:** support v-model validation ([0859cd4](https://github.com/vuejs/vue-validator/commit/0859cd4)), closes [#94](https://github.com/vuejs/vue-validator/issues/94)
+* **validator:** support camelizable name attribute ([c812cea](https://github.com/vuejs/vue-validator/commit/c812cea)), closes [#118](https://github.com/vuejs/vue-validator/issues/118)
+
+
+
+<a name="2.0.0-alpha.9"></a>
+# [2.0.0-alpha.9](https://github.com/vuejs/vue-validator/compare/v2.0.0-alpha.8...v2.0.0-alpha.9) (2016-01-01)
+
+
+### Features
+
+* **checkbox:** support checkbox validation ([7f46bad](https://github.com/vuejs/vue-validator/commit/7f46bad))
+* **custom:** support global error message ([c75480f](https://github.com/vuejs/vue-validator/commit/c75480f))
+* **radio:** support radio button validaton ([848f3f5](https://github.com/vuejs/vue-validator/commit/848f3f5))
+* **select:** support select validation ([42284f6](https://github.com/vuejs/vue-validator/commit/42284f6))
+
+
+
+<a name="2.0.0-alpha.8"></a>
+# [2.0.0-alpha.8](https://github.com/vuejs/vue-validator/compare/v2.0.0-alpha.7...v2.0.0-alpha.8) (2015-12-13)
+
+
+### Bug Fixes
+
+* **asset:** fix cannot register validator issue ([dce7e96](https://github.com/vuejs/vue-validator/commit/dce7e96)), closes [#108](https://github.com/vuejs/vue-validator/issues/108)
+
+### Features
+
+* **lazy:** support lazy initialization ([f5c24c9](https://github.com/vuejs/vue-validator/commit/f5c24c9)), closes [#25](https://github.com/vuejs/vue-validator/issues/25)
+* **validation:** support kebab-case ([b26a108](https://github.com/vuejs/vue-validator/commit/b26a108)), closes [#102](https://github.com/vuejs/vue-validator/issues/102)
+
+
+
+<a name="2.0.0-alpha.7"></a>
+# [2.0.0-alpha.7](https://github.com/vuejs/vue-validator/compare/v2.0.0-alpha.6...v2.0.0-alpha.7) (2015-12-10)
+
+
+### Features
+
+* **syntax:** support array syntax on v-validate expression ([bf33bb4](https://github.com/vuejs/vue-validator/commit/bf33bb4))
+
+
+
+<a name="2.0.0-alpha.6"></a>
+# [2.0.0-alpha.6](https://github.com/vuejs/vue-validator/compare/v2.0.0-alpha.6...v2.0.0-alpha.6) (2015-12-07)
+
+
+### Performances
+
+* **bundle**: more compact the vue-validator
+  about 20% smaller build with rollupjs.
+
+  - before
+    - vue-validator.min.js 11701
+    - vue-validator.js 26180
+  - after
+    - vue-validator.min.js 9309
+    - vue-validator.js 20713
+
+
+
+<a name="2.0.0-alpha.5"></a>
+# [2.0.0-alpha.5](https://github.com/vuejs/vue-validator/compare/v2.0.0-alpha.4...v2.0.0-alpha.5) (2015-11-24)
+
+
+### Features
+
+* **messages:** support messages validation property ([34564ec](https://github.com/vuejs/vue-validator/commit/34564ec))
+
+
+
+<a name="2.0.0-alpha.4"></a>
+# 2.0.0-alpha.4 (2015-11-23)
+
+
+### chore
+
+* chore(npm): add commitizen config ([bf23fc3](https://github.com/vuejs/vue-validator/commit/bf23fc3))
+* chore(READEME): modify baduge urls ([0cc7b0e](https://github.com/vuejs/vue-validator/commit/0cc7b0e))
+* chore(sauce): remove unnecessary sauce setting ([edf8383](https://github.com/vuejs/vue-validator/commit/edf8383))
+* chore(travis): change node version ([8c7845c](https://github.com/vuejs/vue-validator/commit/8c7845c))
+
+### docs
+
+* docs(README): add commitizen badge ([1f3399e](https://github.com/vuejs/vue-validator/commit/1f3399e))
+* docs(spec): This is the spec ([6da4e9a](https://github.com/vuejs/vue-validator/commit/6da4e9a))
+
+### feat
+
+* feat(install): support automatically install for standalone ([d8fb356](https://github.com/vuejs/vue-validator/commit/d8fb356))
+
+### fix
+
+* fix(lint): resolve eslint error ([72c3d1b](https://github.com/vuejs/vue-validator/commit/72c3d1b))
+
+
+
+<a name="2.0.0-alpha.3"></a>
+# 2.0.0-alpha.3 (2015-11-23)
+
+
+### chore
+
+* chore(lint): fix eslint errors ([0e58704](https://github.com/vuejs/vue-validator/commit/0e58704))
+* chore(npm): update npm-scripts ([8c866d1](https://github.com/vuejs/vue-validator/commit/8c866d1))
+
+### fix
+
+* fix(override): occured error when using plugin ([3d9fe74](https://github.com/vuejs/vue-validator/commit/3d9fe74)), closes [#92](https://github.com/vuejs/vue-validator/issues/92)
+
+
+
 <a name="2.0.0-alpha.2"></a>
 # 2.0.0-alpha.2 (2015-11-22)
 

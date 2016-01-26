@@ -3,18 +3,17 @@ import Asset from './asset'
 import Override from './override'
 import Validate from './directives/validate'
 import Validator from './directives/validator'
-import Validation from './validation'
 
 
 /**
- * Install
+ * plugin
  *
  * @param {Function} Vue
  * @param {Object} options
  */
 
-export default function install (Vue, options = {}) {
-  if (install.installed) {
+function plugin (Vue, options = {}) {
+  if (plugin.installed) {
     warn('already installed.')
     return
   }
@@ -25,4 +24,12 @@ export default function install (Vue, options = {}) {
   Override(Vue)
   Validator(Vue)
   Validate(Vue)
+}
+
+plugin.version = '2.0.0-alpha.16'
+
+export default plugin
+
+if (typeof window !== 'undefined' && window.Vue) {
+  window.Vue.use(plugin)
 }

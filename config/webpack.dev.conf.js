@@ -1,18 +1,35 @@
+var webpack = require('webpack')
+
 module.exports = {
-  entry: {
-    app: ['webpack/hot/dev-server', './index.js']
-  },
+  entry: './index.js',
   output: {
     path: './',
     publicPath: '/',
-    filename: 'basic.build.js'
+    filename: 'build.js'
   },
+  devtool: 'source-map',
   module: {
-    loaders: [{
+    preLoaders: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      loader: 'babel'
+      loader: 'eslint-loader'
+    }],
+    loaders: [{
+      test: /\.js$/,
+      exclude: /node_modules|vue\/dist/,
+      loader: 'babel',
+      query: {
+        presets: ['es2015']
+      }
     }]
   },
-  devtool: 'inline-source-map'
+  devServer: {
+    contentBase: './',
+    port: 8080,
+    hot: true,
+    inline: true
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ]
 }
